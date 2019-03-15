@@ -41,6 +41,7 @@ else
 fi
 
 /kaniko/executor -v ${LOG} \
+    --skip-tls-verify \
     --context=${CONTEXT} \
     --dockerfile=${DOCKERFILE} \
     ${DESTINATIONS} \

@@ -1,0 +1,11 @@
+Amazon ECR
+
+eval $(aws ecr get-login --no-include-email)
+
+docker build -t kaosnyrb/kanikodroneecr:25 .
+docker push kaosnyrb/kanikodroneecr:25
+
+docker build -t 717340076277.dkr.ecr.eu-west-1.amazonaws.com/jenkinsdockeraws .
+docker push 717340076277.dkr.ecr.eu-west-1.amazonaws.com/jenkinsdockeraws:latest
+
+aws configure set region us-west-1
